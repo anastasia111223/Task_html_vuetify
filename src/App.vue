@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <header>
+      <HelloWorld/>
+    </header>
+    <v-main>
+      <v-row width="2526">
+        <v-col col="12" class="py-0">
+          <CarouselUnit/>
+        </v-col>
+      </v-row>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld';
+import CarouselUnit from './components/CarouselUnit';
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    CarouselUnit
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.v-main {
+  font: Roboto, sans-serif;
 }
+header {
+  font: Cormorant, sans-serif;
+}
+
 </style>
