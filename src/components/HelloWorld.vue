@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row class="primary d-flex align-center px-3 mt-0 body--text" height="42" color-color.black>
-      <v-col cols="4" class="pa-0 d-inline-block">
+      <v-col cols="4" class="pa-0 d-none d-md-inline-block">
         <v-menu elevation="0" 
           :close-on-content-click="true"
           :offset-y="true"
@@ -72,14 +72,14 @@
           </v-icon>
         Clearance sales</a>
       </v-col>
-      <v-col cols="4" class="py-0">
+      <v-col cols="12" md="4" class="py-0">
           <div class="roboto">
             <v-icon left color="body">
             mdi-odnoklassniki
             </v-icon>
           Hurrah! Get Free Shipping on All Orders Over $99!</div>
       </v-col>
-      <v-col cols="4" class="py-0 d-flex justify-end">
+      <v-col cols="4" class="py-0 d-none d-md-flex justify-end">
           <div class="d-inline-block px-3 roboto">
             <v-icon left color="body">
             mdi-phone-in-talk
@@ -121,7 +121,7 @@
               v-bind="attrs"
               v-on="on"
               @mouseover="hoverIcon=true" @mouseleave="hoverIcon=false"
-              class="hover-lined text-capitalize py-8 px-24 text-сormorant secondary--text">
+              class="hover-lined text-capitalize py-8 px-24 text-сormorant secondary--text d-none d-md-flex">
               Home
               <v-icon right v-text="changeIcon"></v-icon>
             </v-btn>
@@ -150,7 +150,7 @@
               v-bind="attrs"
               v-on="on"
               @mouseover="hoverIcon2=true" @mouseleave="hoverIcon2=false"
-              class="hover-lined text-capitalize py-8 px-24 text-сormorant secondary--text">
+              class="hover-lined text-capitalize py-8 px-24 text-сormorant secondary--text d-none d-md-flex">
               Shop
               <v-icon right v-text="changeIcon2"></v-icon>
             </v-btn>
@@ -200,7 +200,7 @@
               v-bind="attrs"
               v-on="on"
               @mouseover="hoverIcon3=true" @mouseleave="hoverIcon3=false"
-              class="hover-lined text-capitalize py-8 px-24 text-сormorant secondary--text">
+              class="hover-lined text-capitalize py-8 px-24 text-сormorant secondary--text d-none d-md-flex">
               Pages
               <v-icon right v-text="changeIcon3"></v-icon>
             </v-btn>
@@ -225,7 +225,7 @@
               v-bind="attrs"
               v-on="on"
               @mouseover="hoverIcon4=true" @mouseleave="hoverIcon4=false"
-              class="hover-lined text-capitalize py-8 px-24 text-сormorant secondary--text">
+              class="hover-lined text-capitalize py-8 px-24 text-сormorant secondary--text d-none d-md-flex">
               Blog
               <v-icon right v-text="changeIcon4"></v-icon>
             </v-btn>
@@ -254,7 +254,7 @@
               v-bind="attrs"
               v-on="on"
               @mouseover="hoverIcon2=true" @mouseleave="hoverIcon2=false"
-              class="hover-lined text-capitalize py-8 px-24 text-сormorant secondary--text">
+              class="hover-lined text-capitalize py-8 px-24 text-сormorant secondary--text d-none d-md-flex">
               Look Book
               <v-icon right v-text="changeIcon2"></v-icon>
             </v-btn>
@@ -281,7 +281,7 @@
           <v-icon left inline>
             mdi-magnify 
           </v-icon>
-        Search</a>
+          Search</a>
         <v-menu elevation="0" 
           :offset-y="true"
           color="body">
@@ -291,9 +291,15 @@
               v-bind="attrs"
               v-on="on"
               @mouseover="hoverIcon3=true" @mouseleave="hoverIcon3=false"
-              class="hover-lined text-capitalize py-8 px-24 roboto headertext--text">
+              class="hover-lined text-capitalize py-8 px-24 roboto headertext--text d-none d-md-flex">
               My account
               <v-icon right v-text="changeIcon3" color="headertext"></v-icon>
+            </v-btn>
+            <v-btn
+              icon
+              color="headertext"
+              class="d-md-none d-flex">
+              <v-icon>mdi-account</v-icon>
             </v-btn>
           </template>
           <v-list width="280" class="py-30 rounded-0 border-menu" plain>
@@ -307,13 +313,7 @@
             </v-list-item>
           </v-list>
         </v-menu>
-        <g>
-          <title>background</title>
-          <rect fill="#777777" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
-          <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-            <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
-          </g>
-        </g>
+        
       </v-app-bar>
     </v-row>
   </div>
@@ -460,4 +460,5 @@ a {
 .hover-lined:hover {
   border-bottom: 1px solid #111111;
 }
+
 </style>
